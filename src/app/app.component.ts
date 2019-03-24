@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'aoe2';
+  sidebar: boolean;
+
+  constructor() {
+    this.sidebar = true;
+  }
+
+  toggleSidebar() {
+    this.sidebar = !this.sidebar;
+
+    console.log("hello");
+  }
 }
